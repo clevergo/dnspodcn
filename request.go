@@ -15,10 +15,10 @@ type Request interface {
 // BasicRequest contains the basic fields of API request.
 type BasicRequest struct {
 	// The HTTP request method.
-	Method string
+	Method string `json:"-"`
 
 	// The endpoint of API.
-	Endpoint string
+	Endpoint string `json:"-"`
 }
 
 // NewBasicRequest returns a basic request with the given method and endpoint.
