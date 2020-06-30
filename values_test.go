@@ -56,5 +56,5 @@ func TestValuesEncode(t *testing.T) {
 
 	email := "fizz@buzz.com"
 	vs.Set("email", email)
-	assert.Equal(t, fmt.Sprintf("%s&%s=%s", "foo=bar", "email", url.QueryEscape(email)), vs.Encode())
+	assert.Equal(t, fmt.Sprintf("%s=%s&%s", "email", url.QueryEscape(email), "foo=bar"), vs.Encode())
 }

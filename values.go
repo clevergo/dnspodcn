@@ -7,6 +7,7 @@ package dnspodcn
 import (
 	"encoding/json"
 	"net/url"
+	"sort"
 	"strings"
 )
 
@@ -44,14 +45,20 @@ func (vs Values) Encode() string {
 	if len(vs) == 0 {
 		return ""
 	}
+	keys := make([]string, 0, len(vs))
+	for key := range vs {
+		keys = append(keys, key)
+	}
+	url.Values{}.Encode()
+	sort.Strings(keys)
 	var buf strings.Builder
-	for k, v := range vs {
+	for _, key := range keys {
 		if buf.Len() > 0 {
 			buf.WriteByte('&')
 		}
-		buf.WriteString(url.QueryEscape(k))
+		buf.WriteString(url.QueryEscape(key))
 		buf.WriteByte('=')
-		buf.WriteString(url.QueryEscape(v))
+		buf.WriteString(url.QueryEscape(vs[key]))
 	}
 	return buf.String()
 }
