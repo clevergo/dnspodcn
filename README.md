@@ -4,6 +4,9 @@
 [![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/clevergo.tech/dnspodcn?tab=doc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/dnspodcn?style=for-the-badge)](https://goreportcard.com/report/github.com/clevergo/dnspodcn)
 [![Release](https://img.shields.io/github/release/clevergo/dnspodcn.svg?style=for-the-badge)](https://github.com/clevergo/dnspodcn/releases)
+[![Downloads](https://img.shields.io/endpoint?url=https://pkg.clevergo.tech/api/badges/downloads/total/clevergo.tech/dnspodcn?style=flat-square)](https://pkg.clevergo.tech/clevergo.tech/dnspodcn)
+[![Chat](https://img.shields.io/badge/chat-telegram-blue?style=flat-square)](https://t.me/clevergotech)
+[![Community](https://img.shields.io/badge/community-forum-blue?style=flat-square&color=orange)](https://forum.clevergo.tech)
 
 `dnspodcn` 是 [DNSPod](https://www.dnspod.cn/docs/index.html) API 的 Go SDK。其中 `Provider` 实现了 [libdns](https://github.com/libdns/libdns/) 接口。
 
